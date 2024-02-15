@@ -1,14 +1,13 @@
 package br.exemplo.desafio.POO;
 
 import java.time.LocalDate;
-import java.util.Locale;
 
 public class Mentorias extends  Conteudos{
 
     private LocalDate data;
     @Override
     public double calcularXp() {
-        return 0;
+        return XP_PADRAO + 20d;
     }
 
     public Mentorias() {
