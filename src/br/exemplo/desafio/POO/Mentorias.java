@@ -26,7 +26,7 @@ public class Mentorias extends  Conteudos{
 
     @Override
     public String toString(){
-        String str = "\n\t[Mentoring name:"+getTitulo() + "\n\tDescription:"+getDescricao() +"\n\tDate:"+data + "]\n";
-    return str;
+
+    return "\n\t[Mentoring name:"+getTitulo() + "\n\tDescription:"+getDescricao() +"\n\tDate:"+data + "]\n";
     }
 }
