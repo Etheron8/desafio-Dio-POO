@@ -6,7 +6,7 @@ public class Dev {
 
 
     private String name;
-    private int age;
+    private final int age;
 
     private Set<Conteudos> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudos> conteudosConcluidos = new LinkedHashSet<>();
@@ -51,26 +51,17 @@ public class Dev {
         return name;
     }
 
-    public void setNome(String nome) {
-        this.name = nome;
-    }
 
 
     public Set<Conteudos> getConteudosInscritos() {
         return conteudosInscritos;
     }
 
-    public void setConteudosInscritos(Set<Conteudos> conteudosInscritos) {
-        this.conteudosInscritos = conteudosInscritos;
-    }
 
-    public Set<Conteudos> getConteudosConcluidos() {
-        return conteudosConcluidos;
-    }
 
-    public void setConteudosConcluidos(Set<Conteudos> conteudosConcluidos) {
-        this.conteudosConcluidos = conteudosConcluidos;
-    }
+
+
+
 
     @Override
     public boolean equals(Object o) {

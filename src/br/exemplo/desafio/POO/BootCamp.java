@@ -27,17 +27,12 @@ public class BootCamp {
         return professorName;
     }
 
-    public void setProfessorName(String professorName) {
-        this.professorName = professorName;
-    }
+
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getDescricao() {
         return descricao;
