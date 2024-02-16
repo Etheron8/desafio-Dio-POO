@@ -5,7 +5,7 @@ import java.util.*;
 public class Dev {
 
 
-    private String name;
+    private final String name;
     private final int age;
 
     private Set<Conteudos> conteudosInscritos = new LinkedHashSet<>();
