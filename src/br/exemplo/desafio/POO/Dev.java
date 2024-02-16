@@ -5,7 +5,6 @@ import java.util.*;
 public class Dev {
 
     private String nome;
-    private int idade;
 
     private Set<Conteudos> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudos> conteudosConcluidos = new LinkedHashSet<>();
@@ -36,21 +35,11 @@ public class Dev {
         return soma;
     }
 
-    public String getNome() {
-        return nome;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
 
     public Set<Conteudos> getConteudosInscritos() {
         return conteudosInscritos;
@@ -73,11 +62,11 @@ public class Dev {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dev dev = (Dev) o;
-        return idade == dev.idade && Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, idade, conteudosInscritos, conteudosConcluidos);
+        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
     }
 }
