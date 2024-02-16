@@ -14,9 +14,6 @@ public class Mentorias extends  Conteudos{
     public Mentorias() {
     }
 
-    public LocalDate getData() {
-        return data;
-    }
 
     public void setData(LocalDate data) {
         this.data = data;
