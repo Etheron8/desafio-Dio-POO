@@ -9,15 +9,28 @@ import java.util.Set;
 public class BootCamp {
     private String name;
     private String descricao;
+
+    private String professorName;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devInscritos = new HashSet<>();
     private Set<Conteudos> conteudos = new LinkedHashSet<>();
 
-    public BootCamp(String name, String descricao) {
+    public BootCamp(String name, String descricao, String professor) {
         this.name = name;
         this.descricao = descricao;
+        this.professorName = professor;
+
     }
+
+    public String getProfessorName() {
+        return professorName;
+    }
+
+    public void setProfessorName(String professorName) {
+        this.professorName = professorName;
+    }
+
     public String getName() {
         return name;
     }

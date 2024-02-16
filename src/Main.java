@@ -17,8 +17,8 @@ public class Main {
         Mentorias mentoria0 = new Mentorias("mentoria de java", "mentoria java", LocalDate.now());
         Mentorias mentoria1 = new Mentorias("mentoria de C++", "mentoria C++", LocalDate.now());
 
-        BootCamp bootcamp = new BootCamp("Java Developer", "Bootcamp Java Developer");
-        BootCamp bootcamp1 = new BootCamp("C++ Developer", "Bootcamp C++ Developer");
+        BootCamp bootcamp = new BootCamp("Java Developer", "Bootcamp Java Developer", "Gleyson Sampaio");
+        BootCamp bootcamp1 = new BootCamp("C++ Developer", "Bootcamp C++ Developer", "Cami");
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(mentoria0);
 
@@ -33,8 +33,8 @@ public class Main {
 
 
 
-        Dev devName0 = new Dev("Felipe");
-        Dev devName1 = new Dev("Lena");
+        Dev devName0 = new Dev("Felipe", 32);
+        Dev devName1 = new Dev("Lena", 40);
 
         devName0.inscreverBootCamps(bootcamp1);
         devName1.inscreverBootCamps(bootcamp);
@@ -45,6 +45,7 @@ public class Main {
 
             System.out.println("[" + entry.getKey() + "] = " + "BootCamp Name:"+ entry.getValue().getName() +
                     "\n\tStart Date:"+ entry.getValue().getDataInicial() + "\n\tEnd Date:" + entry.getValue().getDataFinal() +
+                    "\n\tTeacher:" + entry.getValue().getProfessorName() +
                     "\n\tDevsIncritos::"+ entry.getValue().getDevInscritos().size() + "\n\t Content:" + entry.getValue().getConteudos() );
         }
 
@@ -65,9 +66,9 @@ public class Main {
 
 
         System.out.println("\t------------------\t");
-        System.out.println("Dev:"+ devName0.getNome() + " Content Registered:" + devName0.getConteudosInscritos());
+        System.out.println("Dev:"+ devName0.getNome() + "\n age:" + devName0.getAge() + "\n\tContent Registered:" + devName0.getConteudosInscritos());
         System.out.println("\t------------------\t");
-        System.out.println("Dev:"+ devName1.getNome() + " Content Registered:" + devName1.getConteudosInscritos());
+        System.out.println("Dev:"+ devName1.getNome() + "\n age:" + devName1.getAge() + "\n\tContent Registered:" + devName1.getConteudosInscritos());
 
 
     }

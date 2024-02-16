@@ -4,14 +4,17 @@ import java.util.*;
 
 public class Dev {
 
-    private String nome;
+
+    private String name;
+    private int age;
 
     private Set<Conteudos> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudos> conteudosConcluidos = new LinkedHashSet<>();
 
 
-    public Dev(String nome) {
-        this.nome = nome;
+    public Dev(String nome, int age) {
+        this.name = nome;
+        this.age = age;
     }
 
     public void inscreverBootCamps(BootCamp bootCamp){
@@ -40,12 +43,16 @@ public class Dev {
         return soma;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public String getNome() {
-        return nome;
+        return name;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.name = nome;
     }
 
 
@@ -70,11 +77,11 @@ public class Dev {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dev dev = (Dev) o;
-        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+        return Objects.equals(name, dev.name) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+        return Objects.hash(name, conteudosInscritos, conteudosConcluidos);
     }
 }
