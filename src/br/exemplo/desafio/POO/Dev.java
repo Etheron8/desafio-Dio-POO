@@ -9,8 +9,13 @@ public class Dev {
     private Set<Conteudos> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudos> conteudosConcluidos = new LinkedHashSet<>();
 
+
+    public Dev(String nome) {
+        this.nome = nome;
+    }
+
     public void inscreverBootCamps(BootCamp bootCamp){
-        this.conteudosConcluidos.addAll(bootCamp.getConteudos());
+        this.conteudosInscritos.addAll(bootCamp.getConteudos());
         bootCamp.getDevInscritos().add(this);
 
     }
@@ -35,6 +40,9 @@ public class Dev {
         return soma;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;

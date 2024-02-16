@@ -8,7 +8,12 @@ public class Curso extends Conteudos{
         return 0;
     }
 
-    public Curso() {
+    public Curso(String titulo, String descricao, int cargaHoraria) {
+
+        super.setTitulo(titulo);
+        super.setDescricao(descricao);
+        this.cargaHoraria = cargaHoraria;
+
     }
 
     public int getCargaHoraria() {
@@ -21,10 +26,7 @@ public class Curso extends Conteudos{
 
     @Override
     public String toString() {
-        return "Curso{" +
-                "Titulo=" + getTitulo() +
-                "Descrição =" + getDescricao() +
-                "cargaHoraria=" + cargaHoraria +
-                '}';
+        String str = "\n\t[Course Name:" + getTitulo() + "\n\tDescription:"+ getDescricao() + "\n\tWorkload:" + cargaHoraria + "]\n";
+        return  str;
     }
 }

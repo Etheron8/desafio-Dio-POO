@@ -11,8 +11,13 @@ public class Mentorias extends  Conteudos{
         return XP_PADRAO + 20d;
     }
 
-    public Mentorias() {
+    public Mentorias(String titulo, String descricao, LocalDate date) {
+
+        super.setTitulo(titulo);
+        super.setDescricao(descricao);
+        this.data = date;
     }
+
 
 
     public void setData(LocalDate data) {
@@ -20,11 +25,8 @@ public class Mentorias extends  Conteudos{
     }
 
     @Override
-    public String toString() {
-        return "Mentorias{" +
-                "Titulo=" + getTitulo() +
-                "Descrição = " + getDescricao() +
-                "data=" + data +
-                '}';
+    public String toString(){
+        String str = "\n\t[Mentoring name:"+getTitulo() + "\n\tDescription:"+getDescricao() +"\n\tDate:"+data + "]\n";
+    return str;
     }
 }
